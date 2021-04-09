@@ -13,6 +13,21 @@ console.log("Here"+city+city_info_url);
 var c_id;
 $.get(city_info_url, function() {}).done(function(citydata) { 
     c_id = citydata.id
+    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  
+    window.myWidgetParam.push({id: 11,cityid: c_id,appid: '988b6c911cfcc11d1f0a1b2bfd8472ec',units: 'metric',containerid: 'openweathermap-widget-11',  });  
+    (function() {var script = document.createElement('script');
+    script.async = true;script.charset = "utf-8";
+    script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(script, s);  })();
+
+    window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
+    window.myWidgetParam.push({id: 15,cityid: c_id,appid: '988b6c911cfcc11d1f0a1b2bfd8472ec',units: 'metric',containerid: 'openweathermap-widget-15',  });
+        (function() {var script = document.createElement('script');
+        script.async = true;
+        script.charset = "utf-8";script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
+        var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
+
 });
 
 console.log(c_id);
@@ -27,20 +42,6 @@ if (high_score !== null) {
     sData = JSON.parse(cities);
 }
 // 
-window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];  
-window.myWidgetParam.push({id: 11,cityid: c_id,appid: '988b6c911cfcc11d1f0a1b2bfd8472ec',units: 'metric',containerid: 'openweathermap-widget-11',  });  
-(function() {var script = document.createElement('script');
-script.async = true;script.charset = "utf-8";
-script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
-var s = document.getElementsByTagName('script')[0];
-s.parentNode.insertBefore(script, s);  })();
-
-window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
-  window.myWidgetParam.push({id: 15,cityid: c_id,appid: '988b6c911cfcc11d1f0a1b2bfd8472ec',units: 'metric',containerid: 'openweathermap-widget-15',  });
-    (function() {var script = document.createElement('script');
-    script.async = true;
-    script.charset = "utf-8";script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
-    var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
 // 
     $("#search_btn").on("click", function(){
         // get the name/initials and check that input length is higher then 1
