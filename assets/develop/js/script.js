@@ -28,7 +28,7 @@ window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
     script.charset = "utf-8";script.src = "https://openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js";
     var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(script, s);  })();
 // 
-    $("#save_score").on("click", function(){
+    $("#search_btn").on("click", function(){
         // get the name/initials and check that input length is higher then 1
         var get_name=$("#username").val();
         //validate the input
@@ -44,4 +44,10 @@ window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = [];
         //update the page
         document.location.href=curUrl;
         }
+    });
+
+    $("#search_button").on("click",function(){
+        var city = $("#city_search").val();
+        window.location=pagebase+"?city="+city
+        cities.push(city);
     });
