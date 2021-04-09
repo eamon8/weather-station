@@ -8,7 +8,7 @@ var pagebase = location.protocol + '//' + location.host + location.pathname
 //city parameter value
 var city = urlParams.get('city');
 
-var city_info_url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=988b6c911cfcc11d1f0a1b2bfd8472ec"
+var city_info_url = "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=988b6c911cfcc11d1f0a1b2bfd8472ec"
 var c_id;
 $.get(city_info_url, function() {}).done(function(citydata) { 
     c_id = citydata.id
