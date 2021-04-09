@@ -3,5 +3,5 @@ header{
 }
 
 .inline{
-    display: inline;
+    flex: auto auto auto;
 }
