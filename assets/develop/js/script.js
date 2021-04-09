@@ -9,7 +9,6 @@ var pagebase = location.protocol + '//' + location.host + location.pathname
 var city = urlParams.get('city');
 
 var city_info_url = "http://api.openweathermap.org/data/2.5/weather?q="+city+"&appid=988b6c911cfcc11d1f0a1b2bfd8472ec"
-console.log("Here"+city+city_info_url);
 var c_id;
 $.get(city_info_url, function() {}).done(function(citydata) { 
     c_id = citydata.id
@@ -30,7 +29,6 @@ $.get(city_info_url, function() {}).done(function(citydata) {
 
 });
 
-console.log(c_id);
 if (high_score !== null) {
     // parse the scores into variable 
     var sorted_scores = JSON.parse(cities)
